@@ -16,7 +16,7 @@
     </td>
     <td align="center">
   <img alt="React Native Monthly"
-        src="assets/Screenshots/react-native-monthly.png" height="875px" />
+        src="assets/Screenshots/react-native-monthly.png" />
     </td>
    </tr>
 </table>
