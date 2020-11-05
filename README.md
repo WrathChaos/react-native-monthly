@@ -104,6 +104,10 @@ should work of the example project.
 - [ ] Today Feature
 - [ ] Write an article about the lib on Medium
 
+## Credits
+
+Insipired on [Martyna Zielińska](https://dribbble.com/shots/6556907-Medicine-Reminder)
+
 ## Author
 
 FreakyCoder, kurayogun@gmail.com
