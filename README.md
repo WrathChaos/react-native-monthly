@@ -8,10 +8,18 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
 
-<p align="center">
+<table>
+ <tr>
+    <td align="center"> 
   <img alt="React Native Monthly"
-        src="assets/Screenshots/typescript.jpg" />
-</p>
+        src="assets/Screenshots/react-native-monthly.gif" />
+    </td>
+    <td align="center">
+  <img alt="React Native Monthly"
+        src="assets/Screenshots/react-native-monthly.png" height="875px" />
+    </td>
+   </tr>
+</table>
 
 # Installation
 
@@ -93,6 +101,7 @@ should work of the example project.
 ## Future Plans
 
 - [x] ~~LICENSE~~
+- [ ] Today Feature
 - [ ] Write an article about the lib on Medium
 
 ## Author
