@@ -8,18 +8,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=for-the-badge)](https://github.com/prettier/prettier)
 
-<table>
- <tr>
-    <td align="center"> 
+<p align="center">
   <img alt="React Native Monthly"
         src="assets/Screenshots/react-native-monthly.gif" />
-    </td>
-    <td align="center">
   <img alt="React Native Monthly"
         src="assets/Screenshots/react-native-monthly.png" />
-    </td>
-   </tr>
-</table>
+</p>
 
 # Installation
 
