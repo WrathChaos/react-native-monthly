@@ -1,10 +1,13 @@
-import React from "react";
+import * as React from "react";
 import { View, StyleProp, ViewStyle } from "react-native";
 /**
  * ? Local Imports
  */
 import styles, { _monthlyCalendarContainer } from "./RNMonthly.style";
 import MonthlyItem from "./components/MonthlyItem";
+
+const includes = (value: number, array: Array<number>) =>
+  array.indexOf(value) > -1;
 
 export type CustomStyleProp =
   | StyleProp<ViewStyle>
@@ -20,6 +23,7 @@ const RNMonthly: React.FC<IRNMonthlyProps> = ({
   style,
   numberOfDays = 31,
   activeDays,
+  ...rest
 }) => {
   const calculateFlexBasisPercentage = () => {
     switch (numberOfDays) {
@@ -34,21 +38,27 @@ const RNMonthly: React.FC<IRNMonthlyProps> = ({
     }
   };
 
-  const renderMonthlyCalendar = () => {
-    const days = [];
+  const renderMonthlyItem = (index: number, flexBasisPercentage: string) => (
+    <View
+      key={index}
+      style={_monthlyCalendarContainer(
+        index,
+        numberOfDays,
+        flexBasisPercentage,
+      )}
+    >
+      <MonthlyItem
+        {...rest}
+        isActive={activeDays && includes(index, activeDays)}
+      />
+    </View>
+  );
+
+  const renderMonthlyCalendar = (): React.ReactElement => {
+    const days: any = Array<JSX.Element>();
     const flexBasisPercentage = calculateFlexBasisPercentage();
     for (let index = 1; index <= numberOfDays; index++) {
-      days.push(
-        <View
-          style={_monthlyCalendarContainer(
-            index,
-            numberOfDays,
-            flexBasisPercentage,
-          )}
-        >
-          <MonthlyItem isActive={activeDays?.includes(index)} />
-        </View>,
-      );
+      days.push(renderMonthlyItem(index, flexBasisPercentage));
     }
     return days;
   };
