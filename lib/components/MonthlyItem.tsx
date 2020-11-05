@@ -1,31 +1,28 @@
 import * as React from "react";
-import { StyleProp, ViewStyle } from "react-native";
 import RNBounceable from "@freakycoder/react-native-bounceable";
 /**
  * ? Local Imports
  */
 import { _container } from "./MonthlyItem.style";
 
-type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
-
-interface IMonthlyItemProps {
-  style?: CustomStyleProp;
+export interface IMonthlyItemProps {
   isActive?: boolean;
-  backgroundColor?: string;
+  activeBackgroundColor?: string;
+  inactiveBackgroundColor?: string;
   onPress?: () => void;
 }
 
 const MonthlyItem: React.FC<IMonthlyItemProps> = ({
-  style,
   onPress,
   isActive = false,
-  backgroundColor = "#49c1c2",
-  ...rest
+  activeBackgroundColor = "#49c1c2",
+  inactiveBackgroundColor = "#f0f0f0",
 }) => {
   return (
     <RNBounceable
-      {...rest}
-      style={[_container(isActive ? backgroundColor : "#F0F0F0"), style]}
+      style={_container(
+        isActive ? activeBackgroundColor : inactiveBackgroundColor,
+      )}
       onPress={onPress}
     />
   );

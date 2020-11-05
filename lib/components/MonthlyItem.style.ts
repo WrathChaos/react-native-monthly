@@ -1,5 +1,5 @@
-import { ScreenWidth } from "@freakycoder/react-native-helpers";
-import { ViewStyle, StyleSheet } from "react-native";
+import { ViewStyle, Dimensions, StyleSheet } from "react-native";
+const { width: ScreenWidth } = Dimensions.get("screen");
 
 interface Style {
   container: ViewStyle;

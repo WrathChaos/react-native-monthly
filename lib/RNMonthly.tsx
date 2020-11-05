@@ -4,7 +4,7 @@ import { View, StyleProp, ViewStyle } from "react-native";
  * ? Local Imports
  */
 import styles, { _monthlyCalendarContainer } from "./RNMonthly.style";
-import MonthlyItem from "./components/MonthlyItem";
+import MonthlyItem, { IMonthlyItemProps } from "./components/MonthlyItem";
 
 const includes = (value: number, array: Array<number>) =>
   array.indexOf(value) > -1;
@@ -13,7 +13,7 @@ export type CustomStyleProp =
   | StyleProp<ViewStyle>
   | Array<StyleProp<ViewStyle>>;
 
-export interface IRNMonthlyProps {
+export interface IRNMonthlyProps extends IMonthlyItemProps {
   style?: CustomStyleProp;
   numberOfDays?: number;
   activeDays?: Array<number>;
@@ -25,6 +25,9 @@ const RNMonthly: React.FC<IRNMonthlyProps> = ({
   activeDays,
   ...rest
 }) => {
+  if (numberOfDays < 28 || numberOfDays > 31)
+    throw new Error("numberOfDays cannot be less than 28 and more than 31");
+
   const calculateFlexBasisPercentage = () => {
     switch (numberOfDays) {
       case 31:
@@ -48,8 +51,8 @@ const RNMonthly: React.FC<IRNMonthlyProps> = ({
       )}
     >
       <MonthlyItem
-        {...rest}
         isActive={activeDays && includes(index, activeDays)}
+        {...rest}
       />
     </View>
   );
