@@ -7,7 +7,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{ flex: 1, width: "100%", alignItems: "center" }}>
-        <RNMonthly numberOfDays={30} />
+        <RNMonthly numberOfDays={31} activeDays={[1, 5, 6, 31, 11, 21]} />
       </SafeAreaView>
     </>
   );

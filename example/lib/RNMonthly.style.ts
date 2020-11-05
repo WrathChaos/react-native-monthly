@@ -1,11 +1,18 @@
-import {
-  ViewStyle,
-  ImageStyle,
-  TextStyle,
-  Dimensions,
-  StyleSheet,
-} from "react-native";
-const { width: ScreenWidth } = Dimensions.get("window");
+import { ViewStyle, StyleSheet } from "react-native";
+
+const NORMAL_DAYS_PERCENTAGE = "14.2857142857%";
+
+export const _monthlyCalendarContainer = (
+  index: number,
+  numberOfDays: number,
+  flexBasisPercentage: string,
+): ViewStyle => ({
+  marginTop: 8,
+  flexBasis:
+    index > numberOfDays - (numberOfDays === 28 ? 0 : 1)
+      ? flexBasisPercentage
+      : NORMAL_DAYS_PERCENTAGE,
+});
 
 interface Style {
   container: ViewStyle;
