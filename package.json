@@ -1,8 +1,8 @@
 {
   "name": "react-native-monthly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Animated and customizable monthly calendar for React Native",
-  "main": "./build/dist/index.js",
+  "main": "./build/dist/RNMonthly.js",
   "repository": "git@github.com:WrathChaos/react-native-monthly.git",
   "author": "FreakyCoder <kurayogun@gmail.com>",
   "license": "MIT",
@@ -33,8 +33,7 @@
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
-    "react": ">= 16.x.x",
-    "react-native": ">=0.63.x"
+    "@freakycoder/react-native-bounceable": ">= 0.2.4"
   },
   "devDependencies": {
     "@types/react": "^16.9.53",
