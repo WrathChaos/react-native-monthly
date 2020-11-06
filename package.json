@@ -1,6 +1,6 @@
 {
   "name": "react-native-monthly",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Animated and customizable monthly calendar for React Native",
   "main": "./build/dist/RNMonthly.js",
   "repository": "git@github.com:WrathChaos/react-native-monthly.git",
