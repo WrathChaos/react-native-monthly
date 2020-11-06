@@ -89,19 +89,22 @@ should work of the example project.
 | numberOfDays |  number   |    31     | change days of the month it should be more than 28 and less than 31 |
 | activeDays   | number[]  | undefined | set the active days                                                 |
 | style        | ViewStyle |  default  | set or override the style object for the main container             |
+| today        |  number   | undefined | enable the today's selected item or any other                       |
 
 ## Customization (Optionals)
 
-| Property                |   Type   |  Default  | Description                                                        |
-| ----------------------- | :------: | :-------: | ------------------------------------------------------------------ |
-| activeBackgroundColor   |  color   | "#49c1c2" | change the active background color                                 |
-| inactiveBackgroundColor |  color   | "#f0f0f0" | change the inactive background color                               |
-| onPress                 | function | undefined | set your own logic for the button functionality when it is pressed |
+| Property                |   Type    |  Default  | Description                                                        |
+| ----------------------- | :-------: | :-------: | ------------------------------------------------------------------ |
+| activeBackgroundColor   |   color   | "#49c1c2" | change the active background color                                 |
+| inactiveBackgroundColor |   color   | "#f0f0f0" | change the inactive background color                               |
+| todayTextStyle          | TextStyle |  default  | set or override the style object for the today text style          |
+| itemContainerStyle      | ViewStyle |  default  | set or override the style object for the each item container       |
+| onPress                 | function  | undefined | set your own logic for the button functionality when it is pressed |
 
 ## Future Plans
 
 - [x] ~~LICENSE~~
-- [ ] Today Feature
+- [x] ~~Today Feature~~
 - [ ] Write an article about the lib on Medium
 
 ## Credits
